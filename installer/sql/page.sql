@@ -767,7 +767,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   PRIMARY KEY (`idMenu`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.menu: ~0 rows (approximately)
+-- Dumping data for table newcms.menu: ~2 rows (approximately)
 INSERT INTO `menu` (`idMenu`, `sort`, `page_id`, `title_page`, `link_page`, `parent_id`) VALUES
 	(1, NULL, 1, 'Home', 'home', 0),
 	(2, NULL, 2, 'Test', 'test', 0);
@@ -786,7 +786,7 @@ CREATE TABLE IF NOT EXISTS `menu_options` (
   UNIQUE KEY `id_menu` (`id_menu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table newcms.menu_options: ~0 rows (approximately)
+-- Dumping data for table newcms.menu_options: ~2 rows (approximately)
 INSERT INTO `menu_options` (`id`, `id_menu`, `fluid`, `placement`, `aligment`, `background`, `color`) VALUES
 	(1, 'main_navbar', 'Yes', 'top', 'start', 'secondary', 'dark'),
 	(2, 'main_menu', 'Yes', 'top', 'end', 'dark', 'dark');
@@ -929,7 +929,7 @@ CREATE TABLE IF NOT EXISTS `plugins_app` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table newcms.plugins_app: ~35 rows (approximately)
+-- Dumping data for table newcms.plugins_app: ~34 rows (approximately)
 INSERT INTO `plugins_app` (`id`, `plugins`, `plugins_opts`, `script`, `css`, `buttons`, `plugins_script`, `plugins_css`, `active`) VALUES
 	(1, 'gjs-component-countdown', '', '', '', '', 'gjs-component-countdown.js', '', 'Yes'),
 	(2, 'gjs-navbar', '', '', '', '', 'gjs-navbar.js', '', 'Yes'),
@@ -1030,7 +1030,7 @@ CREATE TABLE IF NOT EXISTS `profiles` (
 
 -- Dumping data for table newcms.profiles: ~1 rows (approximately)
 INSERT INTO `profiles` (`idp`, `mkhash`, `firstname`, `lastname`, `gender`, `age`, `avatar`, `birthday`, `phone`, `website`, `social_media`, `profession`, `occupation`, `public_email`, `address`, `followers_count`, `profile_image`, `profile_cover`, `profile_bio`, `language`, `active`, `banned`, `date`, `update`) VALUES
-	('1095616718612d749c68bc3', 'bde98208faca13c1cab2bce2092107d136a21069', 'Jose', 'Mantilla', 'Male', 46, '', '0000-00-00', '', '', '', '', '', '', '', 0, '', '', '', '', 0, 0, '2021-08-31 00:15:24', '2021-11-09 02:00:48');
+	('1095616718612d749c68bc3', '1b1fe70518efa4692018bd268bc86673fcbff952', 'Jose', 'Mantilla', 'Male', 46, '', '0000-00-00', '', '', '', '', '', '', '', 0, '', '', '', '', 0, 0, '2021-08-31 00:15:24', '2021-11-11 16:58:18');
 
 -- Dumping structure for table newcms.purchases
 DROP TABLE IF EXISTS `purchases`;
@@ -1475,7 +1475,7 @@ CREATE TABLE IF NOT EXISTS `table_config` (
   PRIMARY KEY (`tcon_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.table_config: ~0 rows (approximately)
+-- Dumping data for table newcms.table_config: ~1 rows (approximately)
 INSERT INTO `table_config` (`tcon_Id`, `table_name`) VALUES
 	(4, 'configuration,menu,menu_options,page,plugins_app,preset,profiles,theme_base_colors,theme_base_font,theme_headings_font,theme_lead_font,theme_palette,theme_settings,themes,volunteer');
 
@@ -1931,7 +1931,7 @@ CREATE TABLE IF NOT EXISTS `uverify` (
 
 -- Dumping data for table newcms.uverify: ~1 rows (approximately)
 INSERT INTO `uverify` (`iduv`, `username`, `email`, `password`, `mktoken`, `mkkey`, `mkhash`, `mkpin`, `level`, `recovery_phrase`, `activation_code`, `password_key`, `pin_key`, `rp_active`, `is_activated`, `verified`, `banned`, `timestamp`) VALUES
-	('1095616718612d749c68bc3', 'pepiuox', 'contact@pepiuox.net', 'cVR2T2YrY2JVQnExdnpLYlcvOTV4dz09', '25cce270791d66425793377bf424ee92794e2b0c', '9eda604eafd869312131d4a7f8199c53ef5c80f3', 'bde98208faca13c1cab2bce2092107d136a21069', '550044', 'Super Admin', '', '', '', '', 0, 1, 1, 0, '2021-11-09 02:00:48');
+	('1095616718612d749c68bc3', 'pepiuox', 'contact@pepiuox.net', 'cVR2T2YrY2JVQnExdnpLYlcvOTV4dz09', '25cce270791d66425793377bf424ee92794e2b0c', '9eda604eafd869312131d4a7f8199c53ef5c80f3', '1b1fe70518efa4692018bd268bc86673fcbff952', '550044', 'Super Admin', '', '', '', '', 0, 1, 1, 0, '2021-11-11 16:58:18');
 
 -- Dumping structure for table newcms.videos
 DROP TABLE IF EXISTS `videos`;
