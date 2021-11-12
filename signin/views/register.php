@@ -43,37 +43,26 @@ include '../elements/alerts.php';
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-8">
-                        <div class="icheck-primary">
-                            <input type="checkbox" id="agreeTerms" name="agreeTerms" value="agree">
-                            <label for="agreeTerms">
-                                I agree to the <a href="#">terms</a>
-                            </label>
-                        </div>
+                <div class="input-group mb-3">
+                    <div class="icheck-primary">
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms" value="agree">
+                        <label for="agreeTerms">
+                            I agree to the <a href="#">terms</a>
+                        </label>
                     </div>
-
-                    <!-- /.col -->
-                    <div class="col-4">
-                        <button type="submit" name="register" class="btn btn-primary btn-block">Register</button>
-                    </div>
-                    <!-- /.col -->
                 </div>
+
+                <!-- /.col -->
+                <div class="col-12">
+                    <button type="submit" name="register" class="btn btn-primary btn-block">Register</button>
+                </div>
+                <!-- /.col -->
+
             </form>
-
-            <div class="social-auth-links text-center">
-                <p>- OR -</p>
-                <a href="#" class="btn btn-block btn-primary">
-                    <i class="fab fa-facebook mr-2"></i>
-                    Sign up using Facebook
-                </a>
-                <a href="#" class="btn btn-block btn-danger">
-                    <i class="fab fa-google-plus mr-2"></i>
-                    Sign up using Google+
-                </a>
+            <hr>
+            <div class="col-12">
+                <a href="login.php" class="text-center">I already have a membership</a>
             </div>
-
-            <a href="login.php" class="text-center">I already have a membership</a>
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->
