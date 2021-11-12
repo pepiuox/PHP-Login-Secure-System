@@ -64,7 +64,7 @@ if (isset($_GET['user']) && !empty($_GET['user'])) {
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                               
+
                                 <h1 class="m-0 text-dark"><?php echo $vpages; ?></h1>
                             </div>
                             <div class="col-sm-6">
@@ -80,22 +80,22 @@ if (isset($_GET['user']) && !empty($_GET['user'])) {
                 <!-- Main content -->
                 <section class="content">
                     <?php include 'elements/alerts.php'; ?>
-                  
 
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12 mr-auto">
-                                    <div class="card card-primary card-outline">
-                                        <div class="card-body">
-                                            <h2>Poner el contenido que deseas</h2>
-                                        </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 mr-auto">
+                                <div class="card card-primary card-outline">
+                                    <div class="card-body">
+                                        <h2>Poner el contenido que deseas</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- /.row -->
-                        <!-- /.container-fluid -->
-                  
+                    </div>
+                    <!-- /.row -->
+                    <!-- /.container-fluid -->
+
                 </section>
                 <!-- /.content -->
             </div>
@@ -113,7 +113,7 @@ if (isset($_GET['user']) && !empty($_GET['user'])) {
         <!-- ./wrapper -->
         <?php
     } else {
-        header('Location: index.php');
+        header('Location: signin/login.php');
         exit();
     }
     require 'elements/footer.php';
