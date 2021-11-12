@@ -135,7 +135,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" id="editrow" name="editrow" class="btn btn-primary"><span class = "fas fa-edit"></span> Update Profile</button>
+                            <button type="submit" id="editrow" name="editrow" class="btn btn-primary"><span class = "fas fa-edit"></span> Actualizar Perfil</button>
                         </div>
                     </form>
                 </div>

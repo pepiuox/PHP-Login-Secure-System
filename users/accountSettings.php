@@ -76,7 +76,7 @@ if ($rquery->num_rows > 0) {
                 <div class="col-md-12">
                     <form action="profile.php" method="post" role="form" id="add_info">
                         <div class="form-group">
-                            <label for="username">Username:</label> 
+                            <label for="username">Usuario:</label> 
                             <input type="text" class="form-control" id="username" name="username" value="<?php $row['username'] ?>">
                         </div>
                         <div class="form-group">
@@ -84,26 +84,26 @@ if ($rquery->num_rows > 0) {
                             <input type="text" class="form-control" id="email" name="email">
                         </div>
                         <div class="form-group">
-                            <label for="firstname">Firstname:</label> 
+                            <label for="firstname">Nombres:</label> 
                             <input type="text" class="form-control" id="firstname" name="firstname">
                         </div>
                         <div class="form-group">
-                            <label for="lastname">Lastname:</label> 
+                            <label for="lastname">Apellido:</label> 
                             <input type="text" class="form-control" id="lastname" name="lastname">
                         </div>
                         <div class="form-group">
-                            <label for="phone">phone:</label> 
+                            <label for="phone">Telefono:</label> 
                             <input type="text" class="form-control" id="phone" name="phone">
                         </div>
                         <div class="form-group">
-                            <label for="address">address:</label> 
+                            <label for="address">Dirección:</label> 
                             <input type="text" class="form-control" id="address" name="address">
                         </div>
                         <div class="form-group">
-                            <label for="gender">Gender:</label> 
+                            <label for="gender">genero:</label> 
                             <select type="text" class="form-control" id="gender" name="gender">
-                                <option value="Woman">Woman</option>
-                                <option value="Male">Male</option>
+                                <option value="Woman">Mujer</option>
+                                <option value="Male">Varon</option>
                                 <option value="No lo sabe">No lo sabe</option>
                             </select>
                         </div>
@@ -154,7 +154,7 @@ if ($rquery->num_rows > 0) {
                         <div class="form-group">
                             <button type="submit" id="addrow" name="addrow" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-plus" onclick="dVals();"></span>
-                                Add
+                                Agregar
                             </button>
                         </div>
                     </form>

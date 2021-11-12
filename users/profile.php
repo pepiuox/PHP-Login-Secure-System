@@ -66,11 +66,11 @@ if (isset($_GET['user']) && !empty($_GET['user'])) {
                             <div class="col-sm-6">
                                 <?php
                                 if ($user == 'pinfo') {
-                                    $vpages = 'Personal user information';
+                                    $vpages = 'Información personal del usuario ';
                                 } elseif ($user == 'sphra') {
                                     $vpages = 'Security phrase';
                                 } elseif ($user == 'chpass') {
-                                    $vpages = 'Change of password';
+                                    $vpages = 'Cambio de contraseña';
                                 } elseif ($user == 'chpin') {
                                     $vpages = 'Security PIN change ';
                                 } elseif ($user == 'contacts') {
@@ -117,10 +117,10 @@ if (isset($_GET['user']) && !empty($_GET['user'])) {
                                                 <h2>Connected</h2>
                                             </a>
                                             <div class="descText text-center">
-                                                <h4>Wellcome <?php echo USERS_FULLNAMES; ?></h4>
+                                                <h4>Bienvenido <?php echo USERS_FULLNAMES; ?></h4>
                                                 <hr class="colorgraph">
                                                 <p>
-                                                    You are connected as <strong><?php echo $_SESSION['levels']; ?></strong>                                                    
+                                                    Tu estas conectado como <strong><?php echo $_SESSION['levels']; ?></strong>                                                    
                                                 </p>                                             
                                             </div>
                                         </div>
