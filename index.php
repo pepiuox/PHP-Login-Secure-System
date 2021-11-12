@@ -56,7 +56,6 @@ if (isset($_GET['user']) && !empty($_GET['user'])) {
                 </div>
                 <!-- /.sidebar -->
             </aside>
-
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->

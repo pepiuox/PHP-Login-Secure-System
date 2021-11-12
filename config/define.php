@@ -30,5 +30,4 @@ define('SITE_PATH', 'http://localhost:120/loginSystem/');
  define('SUPERADMIN_LEVEL', '9');
  define('ADMIN_NAME', 'Admin');
  define('ADMIN_LEVEL', '5');
-
 ?>
