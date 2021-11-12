@@ -68,11 +68,11 @@ if (isset($_GET['user']) && !empty($_GET['user'])) {
                                 if ($user == 'pinfo') {
                                     $vpages = 'Información personal del usuario ';
                                 } elseif ($user == 'sphra') {
-                                    $vpages = 'Security phrase';
+                                    $vpages = 'Frase de seguridad';
                                 } elseif ($user == 'chpass') {
                                     $vpages = 'Cambio de contraseña';
                                 } elseif ($user == 'chpin') {
-                                    $vpages = 'Security PIN change ';
+                                    $vpages = 'Cambio de PIN de seguridad ';
                                 } elseif ($user == 'contacts') {
                                     $vpages = 'Contactos ';
                                 } else {
