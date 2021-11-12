@@ -302,7 +302,7 @@ session_destroy();
             <title>PHP Login Secure System</title>
 
             <link href="../plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />  
-            <link href="../plugins/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
+            <link href="../plugins/fontawesome/css/all.min.css" rel="stylesheet" type="text/css"/>
             <link href="../plugins/adminlte/css/adminlte.min.css" rel="stylesheet" type="text/css"/>
             <script src="../plugins/adminlte/js/adminlte.min.js" type="text/javascript"></script>
         </head>
