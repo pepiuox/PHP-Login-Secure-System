@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `configuration` (
 -- Dumping data for table php_login.configuration: ~30 rows (approximately)
 INSERT INTO `configuration` (`config_name`, `config_value`) VALUES
 	('DOMAIN_SITE', 'PHPLoginSecureSystem.com'),
-        ('SITE_PATH', 'http://localhost:120/php-login-secure-system/');
+        ('SITE_PATH', 'http://localhost:120/php-login-secure-system/'),
 	('SITE_NAME', 'PHP Login Secure System'),
 	('SITE_DESCRIPTION', 'Your description for your domains'),
 	('SITE_KEYWORDS', 'Your keywords for your domains'),
