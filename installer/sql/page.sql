@@ -14,34 +14,34 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Dumping structure for table newcms.active_guests
+-- Dumping structure for table php_login.active_guests
 DROP TABLE IF EXISTS `active_guests`;
 CREATE TABLE IF NOT EXISTS `active_guests` (
   `ip` varchar(15) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.active_guests: ~0 rows (approximately)
+-- Dumping data for table php_login.active_guests: ~0 rows (approximately)
 
--- Dumping structure for table newcms.active_sessions
+-- Dumping structure for table php_login.active_sessions
 DROP TABLE IF EXISTS `active_sessions`;
 CREATE TABLE IF NOT EXISTS `active_sessions` (
   `session` char(64) COLLATE utf8_bin DEFAULT NULL,
   `date_session` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table newcms.active_sessions: ~0 rows (approximately)
+-- Dumping data for table php_login.active_sessions: ~0 rows (approximately)
 
--- Dumping structure for table newcms.active_users
+-- Dumping structure for table php_login.active_users
 DROP TABLE IF EXISTS `active_users`;
 CREATE TABLE IF NOT EXISTS `active_users` (
   `username` varchar(30) NOT NULL,
   `timestamp` int(11) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.active_users: ~0 rows (approximately)
+-- Dumping data for table php_login.active_users: ~0 rows (approximately)
 
--- Dumping structure for table newcms.admins
+-- Dumping structure for table php_login.admins
 DROP TABLE IF EXISTS `admins`;
 CREATE TABLE IF NOT EXISTS `admins` (
   `adminid` char(23) NOT NULL DEFAULT 'uuid_short();',
@@ -50,9 +50,9 @@ CREATE TABLE IF NOT EXISTS `admins` (
   `superadmin` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.admins: ~0 rows (approximately)
+-- Dumping data for table php_login.admins: ~0 rows (approximately)
 
--- Dumping structure for table newcms.announcement
+-- Dumping structure for table php_login.announcement
 DROP TABLE IF EXISTS `announcement`;
 CREATE TABLE IF NOT EXISTS `announcement` (
   `Announcement_ID` int(11) unsigned NOT NULL,
@@ -69,9 +69,9 @@ CREATE TABLE IF NOT EXISTS `announcement` (
   `Translated_ID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.announcement: ~0 rows (approximately)
+-- Dumping data for table php_login.announcement: ~0 rows (approximately)
 
--- Dumping structure for table newcms.app_config
+-- Dumping structure for table php_login.app_config
 DROP TABLE IF EXISTS `app_config`;
 CREATE TABLE IF NOT EXISTS `app_config` (
   `setting` char(26) NOT NULL,
@@ -83,9 +83,9 @@ CREATE TABLE IF NOT EXISTS `app_config` (
   `required` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.app_config: ~0 rows (approximately)
+-- Dumping data for table php_login.app_config: ~0 rows (approximately)
 
--- Dumping structure for table newcms.banned_users
+-- Dumping structure for table php_login.banned_users
 DROP TABLE IF EXISTS `banned_users`;
 CREATE TABLE IF NOT EXISTS `banned_users` (
   `user_id` char(128) NOT NULL,
@@ -94,9 +94,9 @@ CREATE TABLE IF NOT EXISTS `banned_users` (
   `hours_remaining` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.banned_users: ~0 rows (approximately)
+-- Dumping data for table php_login.banned_users: ~0 rows (approximately)
 
--- Dumping structure for table newcms.configuration
+-- Dumping structure for table php_login.configuration
 DROP TABLE IF EXISTS `configuration`;
 CREATE TABLE IF NOT EXISTS `configuration` (
   `config_name` varchar(20) DEFAULT NULL,
@@ -104,10 +104,11 @@ CREATE TABLE IF NOT EXISTS `configuration` (
   UNIQUE KEY `type_name` (`config_name`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.configuration: ~30 rows (approximately)
+-- Dumping data for table php_login.configuration: ~30 rows (approximately)
 INSERT INTO `configuration` (`config_name`, `config_value`) VALUES
-	('DOMAIN_SITE', 'http://www.yourdomain.com'),
-	('SITE_NAME', 'PHP GrapesJS'),
+	('DOMAIN_SITE', 'PHPLoginSecureSystem.com'),
+        ('SITE_PATH', 'http://localhost:120/php-login-secure-system/');
+	('SITE_NAME', 'PHP Login Secure System'),
 	('SITE_DESCRIPTION', 'Your description for your domains'),
 	('SITE_KEYWORDS', 'Your keywords for your domains'),
 	('SITE_CLASSIFICATION', 'Your classification for your domains'),
@@ -137,7 +138,7 @@ INSERT INTO `configuration` (`config_name`, `config_value`) VALUES
 	('ADMIN_NAME', 'Admin'),
 	('ADMIN_LEVEL', '5');
 
--- Dumping structure for table newcms.deleted_users
+-- Dumping structure for table php_login.deleted_users
 DROP TABLE IF EXISTS `deleted_users`;
 CREATE TABLE IF NOT EXISTS `deleted_users` (
   `user_id` char(128) NOT NULL,
@@ -149,9 +150,9 @@ CREATE TABLE IF NOT EXISTS `deleted_users` (
   `mod_timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.deleted_users: ~0 rows (approximately)
+-- Dumping data for table php_login.deleted_users: ~0 rows (approximately)
 
--- Dumping structure for table newcms.ip
+-- Dumping structure for table php_login.ip
 DROP TABLE IF EXISTS `ip`;
 CREATE TABLE IF NOT EXISTS `ip` (
   `id_session` char(128) DEFAULT NULL,
@@ -160,14 +161,14 @@ CREATE TABLE IF NOT EXISTS `ip` (
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.ip: ~4 rows (approximately)
+-- Dumping data for table php_login.ip: ~4 rows (approximately)
 INSERT INTO `ip` (`id_session`, `user_data`, `address`, `timestamp`) VALUES
 	('0592ad6e0a352cd36b91970f6a7a9dc98d45485d', 'pepiuox@contact.net', '127.0.0.1', '2021-09-14 05:29:43'),
 	('22a0fbc2d9a8667bea2a38d69a6e0f41cff9a798', 'contatct@pepiuox.net', '127.0.0.1', '2021-09-16 04:21:49'),
 	('b1ed8551a80fa6c03457119e068b536f4d92b271', 'contact@ppiuox.net', '127.0.0.1', '2021-10-22 05:10:53'),
 	('b1ed8551a80fa6c03457119e068b536f4d92b271', 'pepiuox@pepiuox.net', '127.0.0.1', '2021-10-22 05:11:27');
 
--- Dumping structure for table newcms.login_attempts
+-- Dumping structure for table php_login.login_attempts
 DROP TABLE IF EXISTS `login_attempts`;
 CREATE TABLE IF NOT EXISTS `login_attempts` (
   `id_session` varchar(128) DEFAULT NULL,
@@ -177,9 +178,9 @@ CREATE TABLE IF NOT EXISTS `login_attempts` (
   `lastlogin` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.login_attempts: ~0 rows (approximately)
+-- Dumping data for table php_login.login_attempts: ~0 rows (approximately)
 
--- Dumping structure for table newcms.profiles
+-- Dumping structure for table php_login.profiles
 DROP TABLE IF EXISTS `profiles`;
 CREATE TABLE IF NOT EXISTS `profiles` (
   `idp` char(128) NOT NULL,
@@ -212,11 +213,11 @@ CREATE TABLE IF NOT EXISTS `profiles` (
   CONSTRAINT `FK_profiles_uverify` FOREIGN KEY (`idp`) REFERENCES `uverify` (`iduv`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.profiles: ~1 rows (approximately)
+-- Dumping data for table php_login.profiles: ~1 rows (approximately)
 INSERT INTO `profiles` (`idp`, `mkhash`, `firstname`, `lastname`, `gender`, `age`, `avatar`, `birthday`, `phone`, `website`, `social_media`, `profession`, `occupation`, `public_email`, `address`, `followers_count`, `profile_image`, `profile_cover`, `profile_bio`, `language`, `active`, `banned`, `date`, `update`) VALUES
 	('1095616718612d749c68bc3', '1b1fe70518efa4692018bd268bc86673fcbff952', 'Jose', 'Mantilla', 'Male', 46, '', '0000-00-00', '', '', '', '', '', '', '', 0, '', '', '', '', 0, 0, '2021-08-31 00:15:24', '2021-11-11 16:58:18');
 
--- Dumping structure for table newcms.role_permissions
+-- Dumping structure for table php_login.role_permissions
 DROP TABLE IF EXISTS `role_permissions`;
 CREATE TABLE IF NOT EXISTS `role_permissions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -229,7 +230,7 @@ CREATE TABLE IF NOT EXISTS `role_permissions` (
   CONSTRAINT `fk_Role_Id_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.role_permissions: ~24 rows (approximately)
+-- Dumping data for table php_login.role_permissions: ~24 rows (approximately)
 INSERT INTO `role_permissions` (`id`, `role_id`, `permission_id`) VALUES
 	(1, 1, 1),
 	(2, 1, 2),
@@ -256,7 +257,7 @@ INSERT INTO `role_permissions` (`id`, `role_id`, `permission_id`) VALUES
 	(23, 2, 14),
 	(24, 2, 15);
 
--- Dumping structure for table newcms.sessions
+-- Dumping structure for table php_login.sessions
 DROP TABLE IF EXISTS `sessions`;
 CREATE TABLE IF NOT EXISTS `sessions` (
   `id` varchar(128) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -266,9 +267,9 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.sessions: ~0 rows (approximately)
+-- Dumping data for table php_login.sessions: ~0 rows (approximately)
 
--- Dumping structure for table newcms.users
+-- Dumping structure for table php_login.users
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `idUser` char(128) NOT NULL,
@@ -292,11 +293,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `FK_users_uverify` FOREIGN KEY (`idUser`) REFERENCES `uverify` (`iduv`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.users: ~1 rows (approximately)
+-- Dumping data for table php_login.users: ~1 rows (approximately)
 INSERT INTO `users` (`idUser`, `username`, `email`, `password`, `verified`, `status`, `ip`, `signup_time`, `email_verified`, `document_verified`, `mobile_verified`, `mkpin`, `create_user`, `update_user`) VALUES
 	('1095616718612d749c68bc3', 'Qnc5RllYMi9QendaSEQraGIweHlXdz09', 'TGRSOUdDM3o1N2hhaUJGRFJoaEltdmFXTExKTlkrK1VxaHVQUGVoSkJ4dz0=', 'cVR2T2YrY2JVQnExdnpLYlcvOTV4dz09', 1, 0, '127.0.0.1', '2021-08-31 00:15:24', '', 0, 0, '550044', '2021-08-31 00:15:24', '2021-08-31 00:15:24');
 
--- Dumping structure for table newcms.users_permissions
+-- Dumping structure for table php_login.users_permissions
 DROP TABLE IF EXISTS `users_permissions`;
 CREATE TABLE IF NOT EXISTS `users_permissions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -309,7 +310,7 @@ CREATE TABLE IF NOT EXISTS `users_permissions` (
   UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.users_permissions: ~15 rows (approximately)
+-- Dumping data for table php_login.users_permissions: ~15 rows (approximately)
 INSERT INTO `users_permissions` (`id`, `name`, `description`, `category`, `required`) VALUES
 	(1, 'Verify Users', 'Administration permission allowing for the verification of new users', 'Users', 1),
 	(2, 'Delete Unverified Users', 'Administration permission allowing the deletion of unverified users', 'Users', 1),
@@ -327,7 +328,7 @@ INSERT INTO `users_permissions` (`id`, `name`, `description`, `category`, `requi
 	(14, 'View Users', 'Administration permission allowing for the viewing of all users', 'Users', 1),
 	(15, 'Delete Users', 'Administration permission allowing for the deletion of users', 'Users', 1);
 
--- Dumping structure for table newcms.users_roles
+-- Dumping structure for table php_login.users_roles
 DROP TABLE IF EXISTS `users_roles`;
 CREATE TABLE IF NOT EXISTS `users_roles` (
   `idRol` int(11) NOT NULL AUTO_INCREMENT,
@@ -340,7 +341,7 @@ CREATE TABLE IF NOT EXISTS `users_roles` (
   UNIQUE KEY `default_role_UNIQUE` (`default_role`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.users_roles: ~5 rows (approximately)
+-- Dumping data for table php_login.users_roles: ~5 rows (approximately)
 INSERT INTO `users_roles` (`idRol`, `name`, `description`, `required`, `default_role`) VALUES
 	(1, 'Super Admin', 'Master administrator of site', 1, 9),
 	(2, 'Admin', 'Site administrator', 1, 5),
@@ -348,7 +349,7 @@ INSERT INTO `users_roles` (`idRol`, `name`, `description`, `required`, `default_
 	(4, 'Stantard User', 'Default site role for standard users', 1, 1),
 	(5, 'Guest', 'Guest visit', 0, 0);
 
--- Dumping structure for table newcms.users_shop
+-- Dumping structure for table php_login.users_shop
 DROP TABLE IF EXISTS `users_shop`;
 CREATE TABLE IF NOT EXISTS `users_shop` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -362,9 +363,9 @@ CREATE TABLE IF NOT EXISTS `users_shop` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.users_shop: ~0 rows (approximately)
+-- Dumping data for table php_login.users_shop: ~0 rows (approximately)
 
--- Dumping structure for table newcms.users_sys
+-- Dumping structure for table php_login.users_sys
 DROP TABLE IF EXISTS `users_sys`;
 CREATE TABLE IF NOT EXISTS `users_sys` (
   `username` varchar(65) NOT NULL,
@@ -391,9 +392,9 @@ CREATE TABLE IF NOT EXISTS `users_sys` (
   PRIMARY KEY (`username`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.users_sys: ~0 rows (approximately)
+-- Dumping data for table php_login.users_sys: ~0 rows (approximately)
 
--- Dumping structure for table newcms.user_groups
+-- Dumping structure for table php_login.user_groups
 DROP TABLE IF EXISTS `user_groups`;
 CREATE TABLE IF NOT EXISTS `user_groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -404,9 +405,9 @@ CREATE TABLE IF NOT EXISTS `user_groups` (
   UNIQUE KEY `group_level` (`group_level`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.user_groups: ~0 rows (approximately)
+-- Dumping data for table php_login.user_groups: ~0 rows (approximately)
 
--- Dumping structure for table newcms.user_info
+-- Dumping structure for table php_login.user_info
 DROP TABLE IF EXISTS `user_info`;
 CREATE TABLE IF NOT EXISTS `user_info` (
   `userid` char(128) NOT NULL,
@@ -425,9 +426,9 @@ CREATE TABLE IF NOT EXISTS `user_info` (
   CONSTRAINT `fk_userids` FOREIGN KEY (`userid`) REFERENCES `users` (`idUser`) ON DELETE CASCADE ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.user_info: ~0 rows (approximately)
+-- Dumping data for table php_login.user_info: ~0 rows (approximately)
 
--- Dumping structure for table newcms.user_jail
+-- Dumping structure for table php_login.user_jail
 DROP TABLE IF EXISTS `user_jail`;
 CREATE TABLE IF NOT EXISTS `user_jail` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -441,9 +442,9 @@ CREATE TABLE IF NOT EXISTS `user_jail` (
   CONSTRAINT `fk_userid_jail` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.user_jail: ~0 rows (approximately)
+-- Dumping data for table php_login.user_jail: ~0 rows (approximately)
 
--- Dumping structure for table newcms.uverify
+-- Dumping structure for table php_login.uverify
 DROP TABLE IF EXISTS `uverify`;
 CREATE TABLE IF NOT EXISTS `uverify` (
   `iduv` char(128) NOT NULL,
@@ -470,7 +471,7 @@ CREATE TABLE IF NOT EXISTS `uverify` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table newcms.uverify: ~1 rows (approximately)
+-- Dumping data for table php_login.uverify: ~1 rows (approximately)
 INSERT INTO `uverify` (`iduv`, `username`, `email`, `password`, `mktoken`, `mkkey`, `mkhash`, `mkpin`, `level`, `recovery_phrase`, `activation_code`, `password_key`, `pin_key`, `rp_active`, `is_activated`, `verified`, `banned`, `timestamp`) VALUES
 	('1095616718612d749c68bc3', 'pepiuox', 'contact@pepiuox.net', 'cVR2T2YrY2JVQnExdnpLYlcvOTV4dz09', '25cce270791d66425793377bf424ee92794e2b0c', '9eda604eafd869312131d4a7f8199c53ef5c80f3', '1b1fe70518efa4692018bd268bc86673fcbff952', '550044', 'Super Admin', '', '', '', '', 0, 1, 1, 0, '2021-11-11 16:58:18');
 

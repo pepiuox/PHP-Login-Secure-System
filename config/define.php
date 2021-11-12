@@ -1,10 +1,10 @@
 <?php
-define('DOMAIN_SITE', 'www.yourdomain.com');
-define('SITE_PATH', 'http://localhost:120/loginSystem/');
- define('SITE_NAME', 'loginSystem');
- define('SITE_DESCRIPTION', 'Your keywords for your domains');
+define('DOMAIN_SITE', 'http://localhost:120/php-login-secure-system/');
+define('SITE_PATH', 'http://localhost:120/php-login-secure-system/');
+ define('SITE_NAME', 'PHP Login Secure System');
+ define('SITE_DESCRIPTION', 'Your description for your domains');
  define('SITE_KEYWORDS', 'Your keywords for your domains');
- define('SITE_CLASSIFICATION', 'Your keywords for your domains');
+ define('SITE_CLASSIFICATION', 'Your classification for your domains');
  define('SITE_ADMIN', 'Super Admin');
  define('SITE_CONTROL', 'dashboard');
  define('SITE_CONFIG', 'config');
@@ -30,4 +30,5 @@ define('SITE_PATH', 'http://localhost:120/loginSystem/');
  define('SUPERADMIN_LEVEL', '9');
  define('ADMIN_NAME', 'Admin');
  define('ADMIN_LEVEL', '5');
+
 ?>

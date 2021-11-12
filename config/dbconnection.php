@@ -4,7 +4,7 @@ include 'error_report.php';
 define('DBHOST', 'localhost');
 define('DBUSER', 'root');
 define('DBPASS', 'truelove');
-define('DBNAME', 'newcms');
+define('DBNAME', 'php_login');
 
 $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 
@@ -19,7 +19,7 @@ require 'define.php';
 if (!empty(SITE_PATH)) {
     $base = SITE_PATH;
 } else {
-    $base = 'http://localhost:120/loginSystem/';
+    $base = 'http://localhost:120/php-login-secure-system/';
 }
 
 $fname = basename($_SERVER['SCRIPT_FILENAME'], '.php');
