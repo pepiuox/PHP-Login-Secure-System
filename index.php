@@ -79,14 +79,41 @@ if (isset($_GET['user']) && !empty($_GET['user'])) {
                 <!-- Main content -->
                 <section class="content">
                     <?php include 'elements/alerts.php'; ?>
-
-
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12 mr-auto">
                                 <div class="card card-primary card-outline">
                                     <div class="card-body">
                                         <h2>Poner el contenido que deseas</h2>
+                                        <?php
+                                        // leves in the system
+                                        if ($level->levels() === 9) {
+                                            echo 'Super Admin';
+                                            ?>
+                                            <p>Hola pon aqui tu contenido</p>
+                                            <?php
+                                        } else if ($level->levels() === 5) {
+                                            echo 'Admin';
+                                            ?>
+                                            <p>Hola pon aqui tu contenido</p>
+                                            <?php
+                                        } else if ($level->levels() === 3) {
+                                            echo 'Manager';
+                                            ?>
+                                            <p>Hola pon aqui tu contenido</p>
+                                            <?php
+                                        } else if ($level->levels() === 1) {
+                                            echo 'Stantard User';
+                                            ?>
+                                            <p>Hola pon aqui tu contenido</p>
+                                            <?php
+                                        } else {
+                                            echo 'Guest';
+                                            ?>
+                                            <p>Hola pon aqui tu contenido</p>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>

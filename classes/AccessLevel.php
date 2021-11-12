@@ -41,10 +41,14 @@ class AccessLevel {
                 return 9;
             } elseif ($rold === 5) {
                 return 5;
-            } else {
+            } elseif ($rold === 3) {
+                return 3;
+            } elseif ($rold === 1) {
                 return 1;
+            } else {
+                return 0;
             }
-        } 
+        }
     }
 
     public function DefaulRoles() {

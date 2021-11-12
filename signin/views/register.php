@@ -8,7 +8,7 @@ include '../elements/alerts.php';
 
     <div class="card">
         <div class="card-body register-card-body">
-            <p class="login-box-msg">Register a new membership</p>
+            <p class="login-box-msg">Registrar una nuevo usuario</p>
 
             <form action="register.php" method="post" class="form-inline d-flex justify-content-center">
                 <div class="input-group mb-3">
@@ -47,7 +47,7 @@ include '../elements/alerts.php';
                     <div class="icheck-primary">
                         <input type="checkbox" id="agreeTerms" name="agreeTerms" value="agree">
                         <label for="agreeTerms">
-                            I agree to the <a href="#">terms</a>
+                            Estoy de acuerdo con los <a href="#">los términos</a>
                         </label>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ include '../elements/alerts.php';
             </form>
             <hr>
             <div class="col-12">
-                <a href="login.php" class="text-center">I already have a membership</a>
+                <a href="login.php" class="text-center">Ya tengo un usuario</a>
             </div>
         </div>
         <!-- /.form-box -->
